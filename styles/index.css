@@ -353,6 +353,10 @@ button:disabled:hover {
   padding-bottom: 1rem;
 }
 
+.pt4 {
+  padding-top: 1rem;
+}
+
 .pr4 {
   padding-right: 1rem;
 }
@@ -385,6 +389,11 @@ button:disabled:hover {
 
 .pt6 {
   padding-top: 1.5rem;
+}
+
+.px8 {
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .pt8 {
@@ -566,17 +575,87 @@ button:disabled:hover {
   --grid-repeat: 3;
 }
 
-.grid, .grid1 {
+.as-start {
+  align-self: start;
+}
+
+.grid, .grid16, .grid15, .grid12, .grid11, .grid6, .grid5, .grid4, .grid3, .grid2, .grid1, .grid500, .grid400, .grid300, .grid150, .grid100, .grid75 {
   display: grid;
   gap: var(--gap-row) var(--gap-col);
 }
 
- .grid1 {
+ .grid500, .grid400, .grid300, .grid150, .grid100, .grid75 {
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-width), 1fr));
+  /* This is better for small screens, once min() is better supported */
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-width), 100%), 1fr));
+}
+
+ .grid6, .grid5, .grid4, .grid3, .grid2, .grid1 {
   grid-template-columns: repeat(var(--grid-repeat), 1fr);
 }
 
 .grid1 {
   --grid-repeat: 1;
+}
+
+.grid2 {
+  --grid-repeat: 2;
+}
+
+.grid3 {
+  --grid-repeat: 3;
+}
+
+.grid4 {
+  --grid-repeat: 4;
+}
+
+.grid5 {
+  --grid-repeat: 5;
+}
+
+.grid6 {
+  --grid-repeat: 6;
+}
+
+.grid75 {
+  --grid-width: 75px;
+}
+
+.grid100 {
+  --grid-width: 100px;
+}
+
+.grid150 {
+  --grid-width: 150px;
+}
+
+.grid300 {
+  --grid-width: 300px;
+}
+
+.grid400 {
+  --grid-width: 400px;
+}
+
+.grid500 {
+  --grid-width: 500px;
+}
+
+.grid11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.grid12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid15 {
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.grid16 {
+  grid-template-columns: repeat(16, 1fr);
 }
 
 .col1 {
@@ -591,6 +670,12 @@ button:disabled:hover {
   gap: 0;
   --gap-row: 0;
   --gap-col: 0;
+}
+
+.gap4 {
+  gap: 1rem;
+  --gap-row: 1rem;
+  --gap-col: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -741,7 +826,7 @@ button:disabled:hover {
   min-height: var(--page-height);
 }
 
- .box16 {
+ .box16, .box4 {
   position: relative;
 }
 
@@ -777,6 +862,11 @@ button:disabled:hover {
   height: 1rem;
 }
 
+.box4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .h8 {
   height: 2rem;
 }
@@ -796,10 +886,6 @@ button:disabled:hover {
 
 .h400 {
   height: 400px;
-}
-
-.wp50 {
-  width: 50%;
 }
 
 .square-box {
@@ -1264,6 +1350,10 @@ button:disabled:hover {
   background: rgba(0, 0, 0, 0.15);
 }
 
+.no-event {
+  pointer-events: none;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -1280,6 +1370,14 @@ switch styles copied and modified from
 https://codepen.io/mallendeo/pen/eLIiG
 by Mauricio Allende (https://mallendeo.com/)
  */
+
+#portal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+}
 
 .iframe {
   width: 100%;

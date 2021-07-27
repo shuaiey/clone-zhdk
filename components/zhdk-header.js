@@ -206,13 +206,13 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = ({ data = [] }) => {
+const MobileNav = ({ data = MAIN_NAV_LIST }) => {
   return (
-    <nav className="bg-white wfull px4 py3 f-center">
+    <nav className="bg-white wfull px4 pt4 f-center">
       <ul className="flex-col ul">
-        {data.map((item) => (
-          <li key={item.name} className="border-bottom">
-            <a className="block h8 lh8 px2 hover:color">{item.name}</a>
+        {data.map(({name, slug, children}) => (
+          <li key={name} className="py2 fw5 f-5 border-bottom">
+            <MyLink href={slug} className="block h8 lh8 px2 hover:color">{name}</MyLink>
           </li>
         ))}
       </ul>

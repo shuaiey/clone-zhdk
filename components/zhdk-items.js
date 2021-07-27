@@ -92,7 +92,7 @@ export const ZHDKReportH2Wrapper = styled.div`
   h2 {
     font-size: 2rem;
     font-weight: 500;
-    padding: .75rem 0.75rem;
+    padding: 0.75rem 0.75rem;
     border-bottom: 1px solid #000;
     margin-bottom: 2rem;
   }
@@ -104,7 +104,7 @@ export const ZHDKReportH2Wrapper = styled.div`
       transform: rotate(-180deg);
       display: inline-block;
       writing-mode: tb-rl;
-    border-bottom: none;
+      border-bottom: none;
     }
   }
 `;
@@ -120,6 +120,11 @@ export const ZHDKContainer = styled.div`
   width: 75%;
   margin-left: 18.75%;
   padding-right: 15px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 1rem;
+  }
 `;
 
 export const ZHDKLink = styled(MyLink)`
@@ -204,6 +209,9 @@ export const BackToTop = styled.a`
   transition: transform 150ms ease-out;
   &:after {
     content: "→";
+  }
+  @media (max-width: 768px){
+    right: 0;
   }
 `;
 

@@ -40,7 +40,7 @@ export default function HeaderWrapper({
           </div>
         </nav>
       </header>
-      <Portal className="wfull" full top="4rem">
+      <Portal className="wfull fixed" full top="3rem">
         <PortalNav onClose={onDPClose} {...rest} />
       </Portal>
     </>

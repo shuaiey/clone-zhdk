@@ -3,7 +3,7 @@ import cx from "classnames";
 export default function CardTwo({
   className,
   height,
-  ratio,
+  ratio = 1,
   square = false,
   hero = false,
   radius = "lg",

@@ -22,6 +22,9 @@ const SidebarWrapper = styled.div`
   & .is-active {
     font-size: 1.2em;
   }
+  @media (max-width: 768px){
+    display:none;
+  }
 `;
 
 const SIDEBAR_LIST = [

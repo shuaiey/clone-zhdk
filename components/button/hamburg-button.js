@@ -14,7 +14,7 @@ export default function HamburgButton ({ circle, className, size = "28", ...rest
       )}
       {...rest}
     >
-      <IconHamburg width={size} />
+      <IconHamburg width={size} className='no-event' />
     </button>
   );
 };

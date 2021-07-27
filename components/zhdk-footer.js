@@ -13,21 +13,21 @@ const ZHDK_FOOTER_DATA = [
   {
     name: "col1",
     children: [
-      { name: "Toni-Areal", slug: "/triangle-menu" },
-      { name: "Musikklub Mehrspur", slug: "/triangle-menu" },
-      { name: "Theater der Künste", slug: "/triangle-menu" },
-      { name: "Kino Toni", slug: "/triangle-menu" },
-      { name: "Museum für Gestaltung", slug: "/triangle-menu" },
+      { name: "Toni-Areal", slug: "/" },
+      { name: "Musikklub Mehrspur", slug: "/" },
+      { name: "Theater der Künste", slug: "/" },
+      { name: "Kino Toni", slug: "/" },
+      { name: "Museum für Gestaltung", slug: "/" },
     ],
   },
   {
     name: "col2",
     children: [
-      { name: "Medienstelle ", slug: "/triangle-menu" },
-      { name: "Medien- und Informationszentrum", slug: "/triangle-menu" },
-      { name: "Personen", slug: "/triangle-menu" },
-      { name: "Jobs", slug: "/triangle-menu" },
-      { name: "Veranstaltungsnewsletter", slug: "/triangle-menu" },
+      { name: "Medienstelle ", slug: "/" },
+      { name: "Medien- und Informationszentrum", slug: "/" },
+      { name: "Personen", slug: "/" },
+      { name: "Jobs", slug: "/" },
+      { name: "Veranstaltungsnewsletter", slug: "/" },
     ],
   },
 ];
@@ -51,14 +51,15 @@ export default function ZHDKFooter() {
             Email: <a href="mailto:info.admin@ zhdk.ch">info.admin@ zhdk.ch</a>
           </span>
         </div>
-        <GridContainer base="1" lg="2" className="flex2 gap0 fwb f-gray-400">
+
+        <div className='box4'></div>
+        <GridContainer base="1" lg="2" className="flex2 gap4 fwb f-gray-400">
           {ZHDK_FOOTER_DATA.map((item) => (
-            <div className="px4" key={item.name}>
-              {/* <div className="fwb mb2">{item.name}</div> */}
+            <div className="" key={item.name}>
               <GridContainer base="2" sm="1" lg="1" className="gap0">
                 {item.children.map((x) => (
                   <Link href={x.slug} key={x.name}>
-                    <a className="mb2 hover:color">{x.name}</a>
+                    <a href={x.slug} className="mb2 hover:color">{x.name}</a>
                   </Link>
                 ))}
               </GridContainer>
