@@ -19,3 +19,18 @@ The site of zhdk.ch shares a universal layout in all pages, which the page layou
 
 The other pages should be rendered properly if feed the page data, except the special content type I didn't contain in the code.
 
+## Demo
+
+🔗 [Click me](https://clone-zhdk.vercel.app/)
+
+## Installation
+
+This project is built with Next.js. To run locally, 
+
+```bash
+git clone git@github.com:shuaiey/clone-zhdk.git
+
+# go to project folder
+npm i / yarn
+npm run dev / yarn dev
+```
