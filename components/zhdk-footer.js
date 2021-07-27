@@ -7,6 +7,7 @@ import {
   YoutubeSolid,
 } from "icons/share";
 import Link from "next/link";
+import { IconExternalLink } from "icons/others";
 
 const ZHDK_FOOTER_DATA = [
   {
@@ -34,7 +35,7 @@ const ZHDK_FOOTER_DATA = [
 export default function ZHDKFooter() {
   return (
     <div className="f-2">
-      <FlexContainer className="py4">
+      <FlexContainer className="py2">
         <div className="flex1 flex-col fw7 lh2">
           <span>Zürcher Hochschule der Künste</span>
           <span>Pfingstweidstrasse 96</span>
@@ -65,7 +66,7 @@ export default function ZHDKFooter() {
           ))}
         </GridContainer>
       </FlexContainer>
-      <div className="pb8 fw7 f-gray-400 f-2 flex-between ">
+      <div className="py2 fw7 f-gray-400 f-2 flex-between ">
         <div className="">
           <MyLink href="/" className="mb2 hover:color mr8">
             Impressum
@@ -80,6 +81,13 @@ export default function ZHDKFooter() {
           <InstagramSolid width="18px" className="mr2 hover:color pointer" />
           <YoutubeSolid width="18px" className="hover:color pointer" />
         </div>
+      </div>
+      <div className="p1 fw5 box-black active-yellow">
+        Created by{" "}
+        <MyLink href="https://shuai.ch" className='hover:color'>
+          Shuai <IconExternalLink width="12px" />
+        </MyLink>
+        .
       </div>
     </div>
   );

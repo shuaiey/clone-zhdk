@@ -120,6 +120,7 @@ p,
 section,
 span,
 strong,
+summary,
 ul,
 var,
 video {
@@ -272,6 +273,10 @@ button:disabled:hover {
   margin-right: auto;
 }
 
+.p1 {
+  padding: 0.25rem;
+}
+
 .mb1 {
   margin-bottom: 0.25rem;
 }
@@ -287,6 +292,11 @@ button:disabled:hover {
 .px2 {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.py2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pl2 {
@@ -379,10 +389,6 @@ button:disabled:hover {
 
 .pt8 {
   padding-top: 2rem;
-}
-
-.pb8 {
-  padding-bottom: 2rem;
 }
 
 .my8 {
@@ -1305,6 +1311,11 @@ by Mauricio Allende (https://mallendeo.com/)
 .box-green-dark {
   background-color: #34c759;
   color: #fff;
+}
+
+.active-yellow {
+  --active-bg: #fffdee;
+  --active-font: #ffc300;
 }
 
 .box-black {
