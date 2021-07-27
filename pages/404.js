@@ -1,8 +1,10 @@
 import MyLink from "components/basic/my-link";
+import MetaTags from "components/basic/meta-tags";
 
 export default function Page404() {
   return (
     <div className="box-3xl mx-auto py24">
+      <MetaTags title="Not found" />
       <h1 className="ff-16 mb4 fwb">
         <span role="img" aria-label="Robot head">
           🤖

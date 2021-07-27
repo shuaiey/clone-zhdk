@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from "react";
-
+import MetaTags from 'components/basic/meta-tags'
 import "styles/index.css";
 import "@reach/skip-nav/styles.css";
 
@@ -9,16 +9,16 @@ export default function App({ Component, pageProps }) {
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }, []);
 
-  // const meta = Component.layoutProps?.meta;
+  const meta = Component.layoutProps?.meta;
 
   return (
     <>
-      {/* {meta && (
+      {meta && (
         <MetaTags
           title={meta.metaTitle || meta.title}
           description={meta.metaDescription || meta.description}
         />
-      )} */}
+      )}
       <Component {...pageProps} />
     </>
   );
